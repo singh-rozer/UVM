@@ -1,0 +1,1369 @@
+                         Chronologic VCS (TM)
+            Version R-2020.12 -- Mon May 15 18:46:43 2023
+               Copyright (c) 1991-2020 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[DEPRECATED_OPTION] Deprecated option used
+  The specified option '+acc' is deprecated.
+  Please use '-debug_access+r+w+nomemcbk -debug_region+cell' instead.
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file simv.daidir/.vcs.timestamp and
+run VCS again.
+
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12; Runtime version R-2020.12;  May 15 18:46 2023
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO risc_test.sv(9) @ 0: uvm_test_top [Constructor] risc_test has been created
+UVM_INFO @ 0: reporter [RNTST] Running test risc_test...
+UVM_INFO risc_sequencer.sv(7) @ 0: uvm_test_top.env.risc_agent.sequencer [Constructor] risc_sequencer has been created
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               risc_test               -     @335 
+  env                      risc_env                -     @350 
+    risc_agent             risc_agent              -     @365 
+      driver               risc_driver             -     @514 
+        m_put_port         uvm_blocking_put_port   -     @659 
+        rsp_port           uvm_analysis_port       -     @533 
+        seq_item_port      uvm_seq_item_pull_port  -     @523 
+      sb_uvm_tlm_fifo      uvm_tlm_fifo #(T)       -     @610 
+        get_ap             uvm_analysis_port       -     @649 
+        get_peek_export    uvm_get_peek_imp        -     @629 
+        put_ap             uvm_analysis_port       -     @639 
+        put_export         uvm_put_imp             -     @619 
+      scoreboard_1         risc_scoreboard_1       -     @543 
+        m_get_port         uvm_blocking_get_port   -     @669 
+        sb_put_port        uvm_blocking_put_port   -     @679 
+      scoreboard_2         risc_scoreboard_2       -     @552 
+        sb2_get_port       uvm_blocking_get_port   -     @689 
+      sequencer            risc_sequencer          -     @375 
+        rsp_export         uvm_analysis_export     -     @384 
+        seq_item_export    uvm_seq_item_pull_imp   -     @502 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+      uvm_tlm_fifo         uvm_tlm_fifo #(T)       -     @561 
+        get_ap             uvm_analysis_port       -     @600 
+        get_peek_export    uvm_get_peek_imp        -     @580 
+        put_ap             uvm_analysis_port       -     @590 
+        put_export         uvm_put_imp             -     @570 
+--------------------------------------------------------------
+
+UVM_WARNING @ 0: uvm_test_top.env.risc_agent.sequencer@@seq [uvm_sequence_base] Body definition undefined
+UVM_INFO risc_seq_item.sv(30) @ 0: reporter@@req [Constructor] risc_seq_item has been created
+UVM_INFO risc_driver.sv(19) @ 0: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h14                                     
+  rs1                          integral       5     'h17                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h8                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'hxxxxxxxx                               
+  command                      string         3     SRL                                      
+  begin_time                   time           64    0                                        
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 0: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h14                                     
+  rs1                          integral       5     'h17                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h8                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'hxxxxxxxx                               
+  command                      string         3     SRL                                      
+  begin_time                   time           64    0                                        
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 014bd433 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 1000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h14                                     
+  rs1                          integral       5     'h17                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h8                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    0                                        
+  end_time                     time           64    0                                        
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 1000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 23 & rs2_shamt = 20 & rd_dest = 8]*********
+UVM_INFO risc_driver.sv(19) @ 2000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hb                                      
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h16                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    2000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 2000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hb                                      
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h16                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    2000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00bedb33 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 3000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hb                                      
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h16                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    2000                                     
+  end_time                     time           64    2000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 3000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 29 & rs2_shamt = 11 & rd_dest = 22]*********
+UVM_INFO risc_driver.sv(19) @ 4000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1f                                     
+  rs1                          integral       5     'h1f                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1e                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    4000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 4000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1f                                     
+  rs1                          integral       5     'h1f                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1e                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    4000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 01ffdf33 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 5000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1f                                     
+  rs1                          integral       5     'h1f                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1e                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    4000                                     
+  end_time                     time           64    4000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 5000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 31 & rs2_shamt = 31 & rd_dest = 30]*********
+UVM_INFO risc_driver.sv(19) @ 6000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1f                                     
+  rs1                          integral       5     'h7                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hf                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    6000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 6000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1f                                     
+  rs1                          integral       5     'h7                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hf                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    6000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 01f3d7b3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 7000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1f                                     
+  rs1                          integral       5     'h7                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hf                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    6000                                     
+  end_time                     time           64    6000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 7000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 7 & rs2_shamt = 31 & rd_dest = 15]*********
+UVM_INFO risc_driver.sv(19) @ 8000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hb                                      
+  rs1                          integral       5     'h1c                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hc                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    8000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 8000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hb                                      
+  rs1                          integral       5     'h1c                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hc                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    8000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00be5633 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 9000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hb                                      
+  rs1                          integral       5     'h1c                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hc                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    8000                                     
+  end_time                     time           64    8000                                     
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 9000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 28 & rs2_shamt = 11 & rd_dest = 12]*********
+UVM_INFO risc_driver.sv(19) @ 10000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1b                                     
+  rs1                          integral       5     'h3                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h5                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    10000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 10000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1b                                     
+  rs1                          integral       5     'h3                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h5                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    10000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 01b1d2b3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 11000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1b                                     
+  rs1                          integral       5     'h3                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h5                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    10000                                    
+  end_time                     time           64    10000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 11000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 3 & rs2_shamt = 27 & rd_dest = 5]*********
+UVM_INFO risc_driver.sv(19) @ 12000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h11                                     
+  rs1                          integral       5     'h3                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1e                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    12000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 12000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h11                                     
+  rs1                          integral       5     'h3                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1e                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    12000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 0111df33 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 13000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h11                                     
+  rs1                          integral       5     'h3                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1e                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    12000                                    
+  end_time                     time           64    12000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 13000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 3 & rs2_shamt = 17 & rd_dest = 30]*********
+UVM_INFO risc_driver.sv(19) @ 14000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'h17                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h8                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    14000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 14000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'h17                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h8                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    14000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00abd433 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 15000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'h17                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h8                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    14000                                    
+  end_time                     time           64    14000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 15000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 23 & rs2_shamt = 10 & rd_dest = 8]*********
+UVM_INFO risc_driver.sv(19) @ 16000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hf                                      
+  rs1                          integral       5     'h4                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hb                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    16000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 16000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hf                                      
+  rs1                          integral       5     'h4                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hb                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    16000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00f255b3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 17000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hf                                      
+  rs1                          integral       5     'h4                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'hb                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    16000                                    
+  end_time                     time           64    16000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 17000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 4 & rs2_shamt = 15 & rd_dest = 11]*********
+UVM_INFO risc_driver.sv(19) @ 18000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hd                                      
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1c                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    18000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 18000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hd                                      
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1c                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    18000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00dede33 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 19000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hd                                      
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1c                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    18000                                    
+  end_time                     time           64    18000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 19000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 29 & rs2_shamt = 13 & rd_dest = 28]*********
+UVM_INFO risc_driver.sv(19) @ 20000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hd                                      
+  rs1                          integral       5     'h13                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h11                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    20000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 20000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hd                                      
+  rs1                          integral       5     'h13                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h11                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    20000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00d9d8b3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 21000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hd                                      
+  rs1                          integral       5     'h13                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h11                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    20000                                    
+  end_time                     time           64    20000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 21000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 19 & rs2_shamt = 13 & rd_dest = 17]*********
+UVM_INFO risc_driver.sv(19) @ 22000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h17                                     
+  rs1                          integral       5     'h18                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h4                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    22000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 22000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h17                                     
+  rs1                          integral       5     'h18                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h4                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    22000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 017c5233 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 23000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h17                                     
+  rs1                          integral       5     'h18                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h4                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    22000                                    
+  end_time                     time           64    22000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 23000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 24 & rs2_shamt = 23 & rd_dest = 4]*********
+UVM_INFO risc_driver.sv(19) @ 24000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hc                                      
+  rs1                          integral       5     'h1                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'ha                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    24000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 24000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hc                                      
+  rs1                          integral       5     'h1                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'ha                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    24000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00c0d533 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 25000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'hc                                      
+  rs1                          integral       5     'h1                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'ha                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    24000                                    
+  end_time                     time           64    24000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 25000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 1 & rs2_shamt = 12 & rd_dest = 10]*********
+UVM_INFO risc_driver.sv(19) @ 26000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1                                      
+  rs1                          integral       5     'h1c                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h2                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    26000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 26000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1                                      
+  rs1                          integral       5     'h1c                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h2                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    26000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 001e5133 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 27000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1                                      
+  rs1                          integral       5     'h1c                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h2                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'he                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    26000                                    
+  end_time                     time           64    26000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_ERROR risc_scoreboard_2.sv(64) @ 27000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MISMATCH FOR COMMAND SRL [ACTUAL = 1c, EXPECTED = e][rs1_val = 28 & rs2_shamt = 1 & rd_dest = 2]********
+UVM_INFO risc_driver.sv(19) @ 28000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'h16                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h14                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'he                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    28000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 28000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'h16                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h14                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'he                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    28000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00ab5a33 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 29000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'h16                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h14                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    28000                                    
+  end_time                     time           64    28000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 29000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 22 & rs2_shamt = 10 & rd_dest = 20]*********
+UVM_INFO risc_driver.sv(19) @ 30000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h15                                     
+  rs1                          integral       5     'h19                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h12                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    30000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 30000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h15                                     
+  rs1                          integral       5     'h19                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h12                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    30000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 015cd933 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 31000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h15                                     
+  rs1                          integral       5     'h19                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h12                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    30000                                    
+  end_time                     time           64    30000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 31000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 25 & rs2_shamt = 21 & rd_dest = 18]*********
+UVM_INFO risc_driver.sv(19) @ 32000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1b                                     
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h7                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    32000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 32000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1b                                     
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h7                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    32000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 01bed3b3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 33000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1b                                     
+  rs1                          integral       5     'h1d                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h7                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    32000                                    
+  end_time                     time           64    32000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 33000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 29 & rs2_shamt = 27 & rd_dest = 7]*********
+UVM_INFO risc_driver.sv(19) @ 34000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'hf                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1c                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    34000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 34000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'hf                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1c                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    34000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 00a7de33 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 35000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'ha                                      
+  rs1                          integral       5     'hf                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1c                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    34000                                    
+  end_time                     time           64    34000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 35000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 15 & rs2_shamt = 10 & rd_dest = 28]*********
+UVM_INFO risc_driver.sv(19) @ 36000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h4                                      
+  rs1                          integral       5     'h19                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1d                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    36000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 36000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h4                                      
+  rs1                          integral       5     'h19                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1d                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    36000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 004cdeb3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 37000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h4                                      
+  rs1                          integral       5     'h19                                     
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h1d                                     
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h1                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    36000                                    
+  end_time                     time           64    36000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_ERROR risc_scoreboard_2.sv(64) @ 37000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MISMATCH FOR COMMAND SRL [ACTUAL = 6, EXPECTED = 1][rs1_val = 25 & rs2_shamt = 4 & rd_dest = 29]********
+UVM_INFO risc_driver.sv(19) @ 38000: uvm_test_top.env.risc_agent.driver [DRIVER] PACKET RECEIVED IN DRIVER: ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1d                                     
+  rs1                          integral       5     'h4                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h7                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h1                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    38000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_1.sv(28) @ 38000: uvm_test_top.env.risc_agent.scoreboard_1 [SCOREBOARD_1] PACKET RECEIVED IN SCOREBOARD_1 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1d                                     
+  rs1                          integral       5     'h4                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h7                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h1                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    38000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+                   1 01d253b3 (inst) @ 80000000 
+UVM_INFO risc_scoreboard_2.sv(56) @ 39000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] PACKET RECEIVED IN SCOREBOARD_2 ---------------------------------------------------------------------------------------------
+Name                           Type           Size  Value                                    
+---------------------------------------------------------------------------------------------
+req                            risc_seq_item  -     @722                                     
+  rs2                          integral       5     'h1d                                     
+  rs1                          integral       5     'h4                                      
+  funct3                       integral       3     'h5                                      
+  funct7                       integral       7     'h0                                      
+  rd                           integral       5     'h7                                      
+  opcode5                      integral       5     'hc                                      
+  ones                         integral       2     'h3                                      
+  expected_val                 integral       32    'h0                                      
+  command                      string         3     SRL                                      
+  begin_time                   time           64    38000                                    
+  end_time                     time           64    38000                                    
+  depth                        int            32    'd2                                      
+  parent sequence (name)       string         3     seq                                      
+  parent sequence (full name)  string         41    uvm_test_top.env.risc_agent.sequencer.seq
+  sequencer                    string         37    uvm_test_top.env.risc_agent.sequencer    
+---------------------------------------------------------------------------------------------
+
+UVM_INFO risc_scoreboard_2.sv(65) @ 39000: uvm_test_top.env.risc_agent.scoreboard_2 [SCOREBOARD_2] ********DATA MATCHED FOR COMMAND SRL [ACTUAL = 0, EXPECTED = 0][rs1_val = 4 & rs2_shamt = 29 & rd_dest = 7]*********
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1270) @ 42000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 42000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   85
+UVM_WARNING :    1
+UVM_ERROR :    2
+UVM_FATAL :    0
+** Report counts by id
+[Constructor]     3
+[DRIVER]    20
+[RNTST]     1
+[SCOREBOARD_1]    20
+[SCOREBOARD_2]    40
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[uvm_sequence_base]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time                42000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 420000 ps
+CPU Time:      0.330 seconds;       Data structure size:   0.1Mb
+Mon May 15 18:46:43 2023
