@@ -1,3 +1,4 @@
 TB Architecture
 
-![image](https://github.com/singh-rozer/UVM/assets/132862452/280c8d9d-2d11-43c3-9538-012b48b38572)
+![image](https://github.com/singh-rozer/UVM/assets/132862452/2d4f007e-2429-48f2-8078-3e49f0ab739a)
+
