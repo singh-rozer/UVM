@@ -1,0 +1,866 @@
+$date
+	Wed Mar 13 22:13:01 2024
+$end
+
+$version
+	Synopsys VCS version R-2020.12
+$end
+
+$timescale
+	1fs
+$end
+
+$comment Csum: 1 bb4a75ade97a3af6 $end
+
+
+$scope module tb $end
+
+$scope begin unnamed$$_vcs_3 $end
+$upscope $end
+
+
+$scope module vif $end
+$var wire 8 ! DIO [7:0] $end
+$var reg 1 " CLE $end
+$var reg 1 # ALE $end
+$var reg 1 $ WE_n $end
+$var reg 1 % RE_n $end
+$var reg 1 & CE_n $end
+$var reg 1 ' R_nB $end
+$var reg 1 ( CLK $end
+$var reg 1 ) RES $end
+$var reg 1 * BF_sel $end
+$var reg 11 + BF_ad [10:0] $end
+$var reg 8 , BF_din [7:0] $end
+$var reg 8 - BF_dou [7:0] $end
+$var reg 1 . BF_we $end
+$var reg 16 / RWA [15:0] $end
+$var reg 1 0 PErr $end
+$var reg 1 1 EErr $end
+$var reg 1 2 RErr $end
+$var reg 3 3 nfc_cmd [2:0] $end
+$var reg 1 4 nfc_strt $end
+$var reg 1 5 nfc_done $end
+$upscope $end
+
+
+$scope module DUT $end
+$var wire 8 ! DIO [7:0] $end
+$var reg 1 6 CLE $end
+$var reg 1 7 ALE $end
+$var reg 1 8 WE_n $end
+$var reg 1 9 RE_n $end
+$var reg 1 : CE_n $end
+$var wire 1 ; R_nB $end
+$var wire 1 < CLK $end
+$var wire 1 = RES $end
+$var wire 1 > BF_sel $end
+$var wire 11 ? BF_ad [10:0] $end
+$var wire 8 @ BF_din [7:0] $end
+$var wire 1 A BF_we $end
+$var wire 16 B RWA [15:0] $end
+$var wire 8 C BF_dou [7:0] $end
+$var reg 1 D PErr $end
+$var reg 1 E EErr $end
+$var reg 1 F RErr $end
+$var wire 3 G nfc_cmd [2:0] $end
+$var wire 1 H nfc_strt $end
+$var reg 1 I nfc_done $end
+$var reg 1 J ires $end
+$var reg 1 K res_t $end
+$var wire 8 L FlashDataIn [7:0] $end
+$var reg 8 M FlashCmd [7:0] $end
+$var reg 8 N FlashDataOu [7:0] $end
+$var wire 2 O adc_sel [1:0] $end
+$var wire 8 P QA_1 [7:0] $end
+$var wire 8 Q QB_1 [7:0] $end
+$var wire 8 Q BF_data2flash [7:0] $end
+$var wire 8 R ECC_data [7:0] $end
+$var wire 1 S Flash_BF_sel $end
+$var wire 1 T Flash_BF_we $end
+$var wire 1 U DIS $end
+$var wire 1 V F_we $end
+$var wire 1 W rar_we $end
+$var reg 8 X addr_data [7:0] $end
+$var reg 8 Y rad_1 [7:0] $end
+$var reg 8 Z rad_2 [7:0] $end
+$var wire 8 [ cad_1 [7:0] $end
+$var wire 8 \ cad_2 [7:0] $end
+$var wire 2 ] amx_sel [1:0] $end
+$var wire 1 ^ CntEn $end
+$var wire 1 _ tc3 $end
+$var wire 1 ` tc2048 $end
+$var wire 1 a cnt_res $end
+$var wire 1 b acnt_res $end
+$var wire 12 c CntOut [11:0] $end
+$var reg 1 d DOS $end
+$var wire 1 e t_start $end
+$var wire 1 f t_done $end
+$var wire 3 g t_cmd [2:0] $end
+$var wire 1 h WCountRes $end
+$var wire 1 i WCountCE $end
+$var reg 1 j TC4 $end
+$var reg 1 k TC8 $end
+$var wire 1 l cmd_we $end
+$var wire 8 m cmd_reg [7:0] $end
+$var wire 1 n SetPrErr $end
+$var wire 1 o SetErErr $end
+$var wire 1 p SetRrErr $end
+$var wire 1 q WrECC $end
+$var wire 1 r WrECC_e $end
+$var wire 1 s enEcc $end
+$var wire 1 t Ecc_en $end
+$var wire 1 u ecc_en_tfsm $end
+$var wire 1 v setDone $end
+$var wire 1 w set835 $end
+$var wire 1 x ALE_i $end
+$var wire 1 y CLE_i $end
+$var wire 1 z WE_ni $end
+$var wire 1 { CE_ni $end
+$var wire 1 | RE_ni $end
+$var wire 1 } DOS_i $end
+$var reg 8 ~ FlashDataOu_i [7:0] $end
+$var reg 4 "! WC_tmp [3:0] $end
+
+$scope module buff $end
+$var wire 8 @ DataInA [7:0] $end
+$var wire 8 L DataInB [7:0] $end
+$var wire 11 ? AddressA [10:0] $end
+$var wire 11 "" AddressB [10:0] $end
+$var wire 1 < ClockA $end
+$var wire 1 < ClockB $end
+$var wire 1 > ClockEnA $end
+$var wire 1 S ClockEnB $end
+$var wire 1 A WrA $end
+$var wire 1 T WrB $end
+$var wire 1 "# ResetA $end
+$var wire 1 "$ ResetB $end
+$var wire 8 P QA [7:0] $end
+$var wire 8 Q QB [7:0] $end
+$var reg 8 P q_a [7:0] $end
+$var reg 8 Q q_b [7:0] $end
+$upscope $end
+
+
+$scope module addr_counter $end
+$var wire 1 < clk $end
+$var wire 1 b Res $end
+$var wire 1 w Set835 $end
+$var wire 1 ^ CntEn $end
+$var wire 12 c CntOut [11:0] $end
+$var reg 1 ` TC2048 $end
+$var reg 1 _ TC3 $end
+$var reg 12 c cnt_state [11:0] $end
+$upscope $end
+
+
+$scope module tim_fsm $end
+$var reg 1 y CLE $end
+$var reg 1 x ALE $end
+$var reg 1 z WE_n $end
+$var reg 1 | RE_n $end
+$var reg 1 { CE_n $end
+$var reg 1 } DOS $end
+$var reg 1 U DIS $end
+$var reg 1 ^ cnt_en $end
+$var wire 1 _ TC3 $end
+$var wire 1 ` TC2048 $end
+$var wire 1 < CLK $end
+$var wire 1 J RES $end
+$var wire 1 e start $end
+$var wire 3 g cmd_code [2:0] $end
+$var reg 1 f Done $end
+$var reg 1 u ecc_en $end
+$var reg 6 "% NxST [5:0] $end
+$var reg 6 "& CrST [5:0] $end
+$var reg 1 "' Done_i $end
+$var wire 1 "( TC $end
+$var reg 3 ") cmd_code_int [2:0] $end
+$upscope $end
+
+
+$scope module main_fsm $end
+$var wire 1 < CLK $end
+$var wire 1 J RES $end
+$var wire 1 H start $end
+$var wire 3 G command [2:0] $end
+$var wire 1 ; R_nB $end
+$var wire 1 > BF_sel $end
+$var wire 1 "* io_0 $end
+$var wire 1 f t_done $end
+$var wire 1 k tc8 $end
+$var wire 1 j tc4 $end
+$var reg 1 v setDone $end
+$var wire 1 S mBF_sel $end
+$var reg 1 V BF_we $end
+$var reg 1 e t_start $end
+$var reg 3 g t_cmd [2:0] $end
+$var reg 1 q WrECC $end
+$var reg 1 s EnEcc $end
+$var reg 2 ] AMX_sel [1:0] $end
+$var reg 8 m cmd_reg [7:0] $end
+$var reg 1 l cmd_reg_we $end
+$var reg 1 W RAR_we $end
+$var reg 1 w set835 $end
+$var reg 1 a cnt_res $end
+$var reg 1 h wCntRes $end
+$var reg 1 i wCntCE $end
+$var reg 1 n SetPrErr $end
+$var reg 1 o SetErErr $end
+$var reg 2 O ADC_sel [1:0] $end
+$var reg 8 "+ NxST [7:0] $end
+$var reg 8 ", CrST [7:0] $end
+$var reg 1 S BF_sel_int $end
+$upscope $end
+
+
+$scope module ecc_gen $end
+$var wire 1 < clk $end
+$var wire 1 b Res $end
+$var wire 4 "- Din [3:0] $end
+$var wire 1 t EN $end
+$var reg 8 R eccByte [7:0] $end
+$var wire 1 ". rp1 $end
+$var wire 1 "/ rp2 $end
+$var wire 1 "0 rp3 $end
+$var wire 8 "1 ecc [7:0] $end
+$upscope $end
+
+
+$scope module ecc_err_loc $end
+$var wire 1 < clk $end
+$var wire 1 b Res $end
+$var wire 7 "2 F_ecc_data [6:0] $end
+$var wire 1 r WrECC $end
+$var reg 1 p ECC_status $end
+$var wire 1 "3 check1 $end
+$var wire 1 "4 check2 $end
+$var wire 1 "5 check3 $end
+$var reg 7 "6 din [6:0] $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module nand_flash $end
+$var wire 8 ! DIO [7:0] $end
+$var wire 1 "7 CLE $end
+$var wire 1 "8 ALE $end
+$var wire 1 "9 WE_n $end
+$var wire 1 ": RE_n $end
+$var wire 1 "; CE_n $end
+$var reg 1 "< R_nB $end
+$var wire 1 = rst $end
+$var reg 1 "= dat_en $end
+$var reg 8 "> datout [7:0] $end
+$var reg 8 "? command [7:0] $end
+$var reg 8 "@ row1 [7:0] $end
+$var reg 8 "A row2 [7:0] $end
+$var reg 8 "B col1 [7:0] $end
+$var reg 8 "C col2 [7:0] $end
+$var reg 8 "D idaddr [7:0] $end
+$var reg 12 "E con1 [11:0] $end
+$var reg 12 "F con1_835 [11:0] $end
+$var integer 32 "G i $end
+$var reg 2 "H con [1:0] $end
+$var reg 12 "I con2 [11:0] $end
+$var reg 12 "J con2_835 [11:0] $end
+$upscope $end
+
+$upscope $end
+
+
+$scope module uvm_pkg $end
+$var reg 32 "K UVM_UNBOUNDED_CONNECTIONS [31:0] $end
+$var reg 1 "L uvm_start_uvm_declarations $end
+$var reg 32 "M uvm_global_random_seed [31:0] $end
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+1"L
+b11111111111111111111111111111111 "K
+b01000010000001111100110001000111 "M
+b000 3
+bxxxxxxxxxxxxxxxx /
+bxxxxxxxx -
+bxxxxxxxx ,
+bxxxxxxxxxxx +
+x7
+xS
+x:
+x6
+xd
+xf
+0"'
+xp
+xE
+0t
+0s
+0T
+xD
+0W
+x9
+xF
+x"(
+x`
+x_
+xj
+xk
+x8
+0r
+xb
+x"3
+x"4
+0l
+0^
+0u
+x"*
+xJ
+0V
+0o
+0n
+0q
+0a
+0w
+0v
+0e
+xI
+xK
+x".
+x"/
+x"0
+x"5
+0x
+1{
+0y
+0U
+0}
+1|
+1z
+0i
+0h
+b11 O
+b00 ]
+bxxxxxx "&
+bxxxxxxxx M
+bxxxxxxxx L
+bxxxxxxxx N
+bxxxxxxxx ~
+b000000 "%
+bxxxx "!
+bxxxxxxxx X
+bxxxxxxxx [
+b0000xxxx \
+bxxx ")
+bxxxxxxxxxxxx c
+bxxxxxxx "6
+b0xxxxxxx "1
+bxxxxxxxx R
+bxxxxxxxx ",
+b00000000 "+
+b00000000 m
+b011 g
+bxxxxxxxx P
+bxxxxxxxx Q
+bxxxxxxx "2
+bxxxxxxxx Z
+bxxxxxxxx Y
+bxxxxxxxxxxx ""
+bxxxx "-
+1"<
+0"=
+b00000000 "B
+b00000000 "C
+b11111111 "?
+b00 "H
+b000000000000 "E
+b100000110101 "F
+b000000000000 "I
+b100000110101 "J
+b00000000 ">
+b00000000000000000000100001000001 "G
+b00000000 "D
+b00000000 "@
+b00000000 "A
+0"$
+0"#
+bxxxxxxxxxxx ?
+bxxxxxxxx @
+bxxxxxxxx C
+bxxxxxxxxxxxxxxxx B
+b000 G
+x#
+x*
+x.
+x&
+x"
+0(
+x1
+x0
+1)
+x%
+x2
+1'
+x$
+x5
+04
+bxxxxxxxx !
+x"8
+x>
+xA
+x";
+x"7
+0<
+1=
+x":
+1;
+x"9
+0H
+$end
+#8000000
+1(
+1<
+1K
+0d
+07
+0#
+0"8
+06
+0"
+0"7
+18
+1$
+1"9
+1:
+1&
+1";
+19
+1%
+1":
+0j
+0k
+0f
+b011 ")
+b000000 "&
+b00000000 ",
+bzzzzzzzz !
+bzzzzzzzz L
+bzzzzzzz "2
+z"*
+#16000000
+0(
+0<
+#24000000
+1(
+1<
+1J
+1b
+#30000000
+0)
+0=
+#32000000
+0(
+0<
+#40000000
+1(
+1<
+0K
+b0000 "!
+b00000000 M
+0I
+05
+0D
+00
+0E
+01
+0F
+02
+b000000000000 c
+b00000000000 ""
+b00000000 \
+b00000000 [
+b00000000 R
+b0000000 "6
+0"5
+0"3
+0"4
+0p
+b00000000 ~
+0_
+0`
+b00000000 X
+0"(
+#48000000
+0(
+0<
+#56000000
+1(
+1<
+0J
+0b
+b00000000 N
+#64000000
+0(
+0<
+#72000000
+1(
+1<
+#80000000
+0(
+0<
+#88000000
+1(
+1<
+#96000000
+0(
+0<
+#104000000
+1(
+1<
+b011 3
+b011 G
+14
+1H
+b00000001 "+
+#112000000
+0(
+0<
+#120000000
+1(
+1<
+04
+0H
+b00000001 ",
+1a
+1b
+b01000100 "+
+#128000000
+0(
+0<
+#136000000
+1(
+1<
+b01000100 ",
+0a
+0b
+b01000101 "+
+#144000000
+0(
+0<
+#152000000
+1(
+1<
+b01000101 ",
+b11111111 m
+1l
+b01000110 "+
+#160000000
+0(
+0<
+#168000000
+1(
+1<
+b11111111 M
+b01000110 ",
+b11111111 ~
+1e
+b000 g
+b00000000 m
+0l
+b000001 "%
+#176000000
+0(
+0<
+#184000000
+1(
+1<
+b11111111 N
+b000 ")
+b000001 "&
+b000010 "%
+#192000000
+0(
+0<
+#200000000
+1(
+1<
+b000010 "&
+0{
+b000011 "%
+#208000000
+0(
+0<
+#216000000
+1(
+1<
+0:
+0&
+0";
+b000011 "&
+1y
+0z
+b000100 "%
+#224000000
+0(
+0<
+#232000000
+1(
+1<
+16
+1"
+1"7
+08
+0$
+0"9
+b000100 "&
+1}
+b000101 "%
+#240000000
+0(
+0<
+#248000000
+1(
+1<
+1d
+b000101 "&
+b11111111 !
+b11111111 L
+b1111111 "2
+1"*
+b000110 "%
+#256000000
+0(
+0<
+#264000000
+1(
+1<
+b000110 "&
+1"'
+1z
+b000111 "%
+#272000000
+0(
+0<
+#280000000
+1(
+1<
+18
+1$
+1"9
+1f
+b000111 "&
+b01000111 "+
+1U
+0}
+0"'
+0y
+1{
+b000001 "%
+#288000000
+0(
+0<
+#296000000
+1(
+1<
+0d
+06
+0"
+0"7
+1:
+1&
+1";
+0f
+b000001 "&
+b01000111 ",
+bzzzzzzzz !
+bzzzzzzzz L
+bzzzzzzz "2
+z"*
+0U
+b000010 "%
+1v
+0e
+b011 g
+b00000000 "+
+#304000000
+0(
+0<
+#312000000
+1(
+1<
+1I
+15
+b011 ")
+b000010 "&
+b00000000 ",
+b000000 "%
+0v
+#320000000
+0(
+0<
+#328000000
+1(
+1<
+b000000 "&
+#336000000
+0(
+0<
+#344000000
+1(
+1<
+#352000000
+0(
+0<
+#360000000
+1(
+1<
+#368000000
+0(
+0<
+#376000000
+1(
+1<
+#384000000
+0(
+0<
+#392000000
+1(
+1<
+#400000000
+0(
+0<
+#408000000
+1(
+1<
+#416000000
+0(
+0<
+#424000000
+1(
+1<
+#432000000
+0(
+0<
+#440000000
+1(
+1<
+#448000000
+0(
+0<
+#456000000
+1(
+1<
+#464000000
+0(
+0<
+#472000000
+1(
+1<
+#480000000
+0(
+0<
+#488000000
+1(
+1<
+#496000000
+0(
+0<
+#504000000
+1(
+1<
+#512000000
+0(
+0<
+#520000000
+1(
+1<
+#528000000
+0(
+0<
+#536000000
+1(
+1<
+#544000000
+0(
+0<
+#552000000
+1(
+1<
+#560000000
+0(
+0<
+#568000000
+1(
+1<
+#576000000
+0(
+0<
+#584000000
+1(
+1<
+#592000000
+0(
+0<
+#600000000
+1(
+1<
+#608000000
+0(
+0<
+#616000000
+1(
+1<
+#624000000
+0(
+0<
+#632000000
+1(
+1<
+#640000000
+0(
+0<
+#648000000
+1(
+1<
+#656000000
+0(
+0<
+#664000000
+1(
+1<
+#672000000
+0(
+0<
+#680000000
+1(
+1<
+#688000000
+0(
+0<
+#696000000
+1(
+1<
+#704000000
+0(
+0<
+#712000000
+1(
+1<
+#720000000
+0(
+0<
+#728000000
+1(
+1<
+#736000000
+0(
+0<
+#744000000
+1(
+1<
+#752000000
+0(
+0<

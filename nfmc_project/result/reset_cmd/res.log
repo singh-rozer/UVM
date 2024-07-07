@@ -1,0 +1,172 @@
+
+Warning-[LNX_OS_VERUN] Unsupported Linux version
+  Linux version 'Fedora release 39 (Thirty Nine)' is not supported on 'x86_64'
+  officially, assuming linux compatibility by default. Set VCS_ARCH_OVERRIDE 
+  to linux or suse32 to override.
+  Please refer to release notes for information on supported platforms.
+
+
+Warning-[LINX_KRNL] Unsupported Linux kernel
+  Linux kernel '6.7.7-200.fc39.x86_64' is not supported.
+  Supported versions are 2.4* or 2.6*.
+
+                         Chronologic VCS (TM)
+            Version R-2020.12 -- Wed Mar 13 22:17:49 2024
+               Copyright (c) 1991-2020 by Synopsys Inc.
+                         ALL RIGHTS RESERVED
+
+This program is proprietary and confidential information of Synopsys Inc.
+and may be used and disclosed only as authorized in a license agreement
+controlling such use and disclosure.
+
+
+Warning-[DEPRECATED_OPTION] Deprecated option used
+  The specified option '+acc' is deprecated.
+  Please use '-debug_access+r+w+nomemcbk -debug_region+cell' instead.
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file simv.daidir/.vcs.timestamp and
+run VCS again.
+
+Chronologic VCS simulator copyright 1991-2020
+Contains Synopsys proprietary information.
+Compiler version R-2020.12; Runtime version R-2020.12;  Mar 13 22:17 2024
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(392) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO @ 0: reporter [RNTST] Running test nfmc_test...
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_root.svh(579) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               nfmc_test               -     @341 
+  env                      nfmc_env                -     @354 
+    agt                    nfmc_agent              -     @377 
+      drv                  nfmc_driver             -     @391 
+        rsp_port           uvm_analysis_port       -     @410 
+        seq_item_port      uvm_seq_item_pull_port  -     @400 
+      mon                  nfmc_monitor            -     @557 
+        ap                 uvm_analysis_port       -     @568 
+      seqr                 nfmc_seqr               -     @420 
+        rsp_export         uvm_analysis_export     -     @429 
+        seq_item_export    uvm_seq_item_pull_imp   -     @547 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    sb                     nfmc_scoreboard         -     @368 
+      imp                  uvm_analysis_imp        -     @583 
+--------------------------------------------------------------
+
+UVM_INFO tb/nfmc_driver.sv(30) @ 0: uvm_test_top.env.agt.drv [nfmc_driver] 
+------------------------------------------------------------------------------------
+Name                           Type        Size  Value                              
+------------------------------------------------------------------------------------
+uvm_sequence_item              nfmc_trans  -     @623                               
+  DIO                          integral    8     'h0                                
+  CLE                          integral    1     'h0                                
+  ALE                          integral    1     'h0                                
+  WE_n                         integral    1     'h0                                
+  RE_n                         integral    1     'h0                                
+  CE_n                         integral    1     'h0                                
+  R_nB                         integral    1     'h0                                
+  CLK                          integral    1     'h0                                
+  RES                          integral    1     'h0                                
+  BF_sel                       integral    1     'h0                                
+  BF_ad                        integral    11    'h0                                
+  BF_din                       integral    8     'hdb                               
+  BF_dou                       integral    8     'h0                                
+  BF_we                        integral    1     'h0                                
+  RWA                          integral    16    'h1234                             
+  PErr                         integral    1     'h0                                
+  EErr                         integral    1     'h0                                
+  RErr                         integral    1     'h0                                
+  nfc_cmd                      integral    3     'h3                                
+  nfc_strt                     integral    1     'h0                                
+  nfc_done                     integral    1     'h0                                
+  address                      integral    16    'h0                                
+  temp_data                    integral    8     'h0                                
+  begin_time                   time        64    0                                  
+  depth                        int         32    'd2                                
+  parent sequence (name)       string      9     seq_reset                          
+  parent sequence (full name)  string      35    uvm_test_top.env.agt.seqr.seq_reset
+  sequencer                    string      25    uvm_test_top.env.agt.seqr          
+------------------------------------------------------------------------------------
+
+                 280ns:  reset function 
+UVM_INFO tb/nfmc_monitor.sv(31) @ 312000000: uvm_test_top.env.agt.mon [nfmc_monitor] 
+------------------------------------------
+Name               Type        Size  Value
+------------------------------------------
+uvm_sequence_item  nfmc_trans  -     @608 
+  DIO              integral    8     'h0  
+  CLE              integral    1     'h0  
+  ALE              integral    1     'h0  
+  WE_n             integral    1     'h0  
+  RE_n             integral    1     'h0  
+  CE_n             integral    1     'h0  
+  R_nB             integral    1     'h0  
+  CLK              integral    1     'h0  
+  RES              integral    1     'h0  
+  BF_sel           integral    1     'h0  
+  BF_ad            integral    11    'h0  
+  BF_din           integral    8     'h0  
+  BF_dou           integral    8     'h0  
+  BF_we            integral    1     'h0  
+  RWA              integral    16    'h0  
+  PErr             integral    1     'h0  
+  EErr             integral    1     'h0  
+  RErr             integral    1     'h0  
+  nfc_cmd          integral    3     'h3  
+  nfc_strt         integral    1     'h0  
+  nfc_done         integral    1     'h1  
+  address          integral    16    'h0  
+  temp_data        integral    8     'h0  
+------------------------------------------
+
+-------------SCOREBOARD---------------
+UVM_INFO tb/nfmc_scoreboard.sv(17) @ 312000000: uvm_test_top.env.sb [nfmc_scoreboard] Rst working properly
+--------------------------------------
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_objection.svh(1270) @ 753000000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO /home/morris/uvm-1.2/src/base/uvm_report_server.svh(847) @ 753000000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :    7
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[TEST_DONE]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[nfmc_driver]     1
+[nfmc_monitor]     1
+[nfmc_scoreboard]     1
+
+$finish called from file "/home/morris/uvm-1.2/src/base/uvm_root.svh", line 517.
+$finish at simulation time            753000000
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 753000000 fs
+CPU Time:      0.330 seconds;       Data structure size:   0.2Mb
+Wed Mar 13 22:17:50 2024

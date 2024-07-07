@@ -1,0 +1,37 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Thu Mar 14 05:20:15 2024
+[*]
+[dumpfile] "/home/016648840/EE297b/prj/dump.vcd"
+[dumpfile_mtime] "Thu Mar 14 05:17:50 2024"
+[dumpfile_size] 10318
+[savefile] "/home/016648840/EE297b/prj/result/reset_cmd/reset_dump.gtkw"
+[timestart] 0
+[size] 1920 1001
+[pos] -1 -1
+*-26.490858 104000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[sst_width] 273
+[signals_width] 126
+[sst_expanded] 1
+[sst_vpaned_height] 296
+@28
+tb.DUT.CLK
+@24
+tb.DUT.nfc_cmd[2:0]
+@28
+tb.DUT.nfc_strt
+tb.DUT.CE_n
+tb.DUT.CLE
+tb.DUT.ALE
+tb.DUT.WE_n
+@22
+tb.DUT.DIO[7:0]
+@28
+tb.DUT.RE_n
+tb.DUT.nfc_done
+tb.DUT.RES
+@29
+tb.DUT.ires
+[pattern_trace] 1
+[pattern_trace] 0
